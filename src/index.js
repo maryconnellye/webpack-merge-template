@@ -1,6 +1,6 @@
 import "./styles.css";
-import { createHomePage } from "./homepage.js";
-import { createMenuPage } from "./menupage.js";
+import { createHomePage } from "./pageOne.js";
+import { createMenuPage } from "./pageTwo.js";
  
 createHomePage();
 
