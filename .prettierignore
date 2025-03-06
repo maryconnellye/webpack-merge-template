@@ -1,3 +1,9 @@
 # Ignore artifacts:
 build
 coverage
+
+{
+  "editor.defaultFormatter": "<another formatter>",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }

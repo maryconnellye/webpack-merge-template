@@ -17,8 +17,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/template.html",
     }),
+    
   ],
   module: {
+
     rules: [
       {
         test: /\.css$/i,
@@ -36,6 +38,20 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: "asset/resource",
       },
+      {
+        test: /\.(?:js|mjs|cjs)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            targets: "defaults",
+            presets: [
+                ['@babel/preset-env', { targets: "defaults" }]
+              ],
+              plugins: ['@babel/plugin-transform-runtime']
+          }
+        }
+      }
     ],
   },
 };
